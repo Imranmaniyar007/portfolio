@@ -1,0 +1,27 @@
+export const techRow1 = [
+    { name: "React", icon: "/images/tech/react.svg" },
+    { name: "Next.js", icon: "/images/tech/next.svg" },
+    { name: "Node.js", icon: "/images/tech/node.svg" },
+    { name: "Three.js", icon: "/images/tech/three.svg" },
+    { name: "Python", icon: "/images/tech/python.svg" },
+    { name: "Tailwind CSS", icon: "/images/tech/tailwind.svg" },
+    { name: "AWS", icon: "/images/tech/aws.svg" },
+    { name: "Javascript", icon: "/images/tech/javascript.svg" },
+    { name: "VS Code", icon: "/images/tech/vscode.svg" },
+];
+    export const techRow2 = [
+    { name: "MongoDB", icon: "/images/tech/mongodb.svg" },
+    { name: "MySQL", icon: "/images/tech/mysql.svg" },
+    { name: "PostgreSQL", icon: "/images/tech/postgresql.svg" },
+    { name: "Git", icon: "/images/tech/git.svg" },
+    { name: "HTML", icon: "/images/tech/html.svg" },
+    { name: "CSS", icon: "/images/tech/css.svg" },
+    { name: "C++", icon: "/images/tech/cpp.svg" },
+    { name: "Java", icon: "/images/tech/java.svg" },
+    { name: "Google Colud", icon: "/images/tech/gcp.svg" },
+    { name: "BootStrap", icon: "/images/tech/boot.svg" },
+    { name: "Docker", icon: "/images/tech/docker.svg" },
+    { name: "Jupyter notbook", icon: "/images/tech/npnb.svg" },
+    { name: "PhP", icon: "/images/tech/php.svg" },
+    { name: "Tensor Flow", icon: "/images/tech/tensor.svg" },
+];

@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dot {
+    position: absolute;
+    left: -9px;
+    width: 16px;
+    height: 16px;
+    background: #a855f7;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #a855f7;
+}
+
+* {
+    cursor: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    cursor: none;
+}
+
+svg path {
+    filter: drop-shadow(0 0 6px #db17e2);
+}
+
+@keyframes scrollGlow {
+    0% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+}
+
+.animate-scrollGlow {
+    animation: scrollGlow 2s linear infinite;
+}
+
+.resume-btn {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transform: translateY(0);
+}
+
+/* DEPTH */
+.resume-btn:hover {
+    transform: translateY(-4px) scale(1.02);
+}
+
+/* MULTI COLOR GLOW */
+.resume-btn:hover {
+    color: white;
+    background: #111;
+
+    box-shadow:
+        0 0 10px rgba(255, 191, 0, 0.6),
+        /* amber */
+        0 0 20px rgba(168, 85, 247, 0.6),
+        /* purple */
+        0 0 40px rgba(168, 85, 247, 0.4),
+        inset 0 0 15px rgba(168, 85, 247, 0.25);
+}
+
+/* cursor light tracking */
+.resume-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background: radial-gradient(circle at var(--x) var(--y),
+            rgba(168, 85, 247, 0.5),
+            transparent 40%);
+    transition: opacity .3s;
+}
+
+.resume-btn:hover::before {
+    opacity: 1;
+}
+
+.text-depth {
+    text-shadow:
+        0 0 40px rgba(168, 85, 247, 0.2),
+        0 20px 80px rgba(0, 0, 0, 0.9);
+}
+
+canvas {
+    outline: none;
+    outline: none;
+}
+
+/* ===== SPLINE PERFORMANCE FIX ===== */
+
+canvas {
+    image-rendering: optimizeSpeed;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Prevent zoom tearing */
+html,
+body {
+    overflow-x: hidden;
+}
+
+section {
+    transform: translateZ(0);
+}
+
+/* ===== Infinite Scroll ===== */
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollReverse {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 45s linear infinite;
+}
+
+.animate-scroll-reverse {
+    animation: scrollReverse 45s linear infinite;
+}
