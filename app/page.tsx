@@ -6,7 +6,6 @@ import TechStack from "@/components/sections/TechStack";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
-import CustomCursor from "@/components/sections/CustomCursor";
 import Spline from "@splinetool/react-spline";
 export default function Home() {
     return (
@@ -15,7 +14,6 @@ export default function Home() {
             <div className="fixed top-0 left-0 w-full h-full -z-10 opacity-40">
                 <Spline scene="https://prod.spline.design/YcBkotmfwXWlgEIl/scene.splinecode" />
             </div>
-            <CustomCursor />
             <Navbar />
             <Hero />
             <About />
@@ -27,3 +25,4 @@ export default function Home() {
         </main>
     );
 }
+

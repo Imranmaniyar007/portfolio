@@ -35,17 +35,13 @@ body {
     box-shadow: 0 0 15px #a855f7;
 }
 
-* {
-    cursor: none;
-}
+
 
 html {
     scroll-behavior: smooth;
 }
 
-body {
-    cursor: none;
-}
+
 
 svg path {
     filter: drop-shadow(0 0 6px #db17e2);
@@ -168,4 +164,17 @@ section {
 
 .animate-scroll-reverse {
     animation: scrollReverse 45s linear infinite;
+}
+
+body {
+    background: #0b0b12;
+    color: white;
+}
+
+.input-style {
+    @apply w-full px-4 py-3 rounded-xl bg-white/5 text-white border border-purple-500/30 placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-500/30 transition;
+}
+
+.contact-input {
+    @apply w-full px-4 py-3 rounded-xl bg-black/50 text-white border border-purple-500/30 placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-500/30 transition;
 }
